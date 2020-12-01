@@ -1,0 +1,22 @@
+{
+  "name": "999dice",
+  "version": "1.0.0",
+  "description": "This is bot for 999dice Game , Lucky for man ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "999dice",
+    "game",
+    "999dice",
+    "api"
+  ],
+  "author": "nvthang",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "qs": "^6.9.4",
+    "round-to": "^5.0.0"
+  }
+}
