@@ -58,25 +58,30 @@ async function placebet(){
     High: bet.high,
   }
   while (true) {
-    let result  = await axios({
-      method: 'post',
-      url: conf.url,
-      data: qs.stringify(body),
-    });
-    if (result.data.PayOut > 0 ){
-      body.PayIn = conf.PayIn;
-      console.log('You win' + "\n PayIn next or Betsize:" + body.PayIn);
-    }else {
-      body.PayIn = (body.PayIn * (100+ conf.Betsize)) /100
-      body.PayIn = body.PayIn.toFixed(0);
-      console.log('You Lost'+ "\n PayIN next or Betsize : "+ body.PayIn);
-    }
+    try {
+      let result  = await axios({
+        method: 'post',
+        url: conf.url,
+        data: qs.stringify(body),
+      });
+      if (result.data.PayOut > 0 ){
+        body.PayIn = conf.PayIn;
+        console.log('You win' + "\n PayIn next or Betsize:" + body.PayIn);
+      }else {
+        body.PayIn = (body.PayIn * (100+ conf.Betsize)) /100
+        body.PayIn = body.PayIn.toFixed(0);
+        console.log('You Lost'+ "\n PayIN next or Betsize : "+ body.PayIn);
+      }
 
-    if (result.data.StartingBalance < body.PayIn) {
-      console.log('YOU LOST ALL COIN ... YOU NOT LUCKY  !!!!!');
-      break;
+      if (result.data.StartingBalance < body.PayIn) {
+        console.log('YOU LOST ALL COIN ... YOU NOT LUCKY  !!!!!');
+        break;
+      }
+      console.log(result.data);
+    } finally{
+      body.PayIn = body.PayIn;
+      console.log("Finally size: " + body.PayIn);
     }
-    console.log(result.data);
   }
 }
 let nvthang =async function nvthang(){
