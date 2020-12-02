@@ -3,6 +3,7 @@ let config = {
   password: '',      //password
   apikey: '',         //Api key
   coin: 'doge',             //btc, doge, ltc, eth
+  base: '10000000000',         //This is 100dogecoin .. Start invest
   url : 'https://www.999dice.com/api/web.aspx',
   PayIn: '100000',             //Start value  1.00100000
   Percent: 11,        //You can win 11% , % win the game
