@@ -9,7 +9,8 @@ node main.js\
 -Note, you can run with tmux in linux
 
 Make the best trading investing for you , make new rich br \
-Register 999dice : [https://www.999dice.com](#https://www.999dice.com/?275583457)
+Register 999dice : [ Link-https://www.999dice.com ](#https://www.999dice.com/?275583457) \
+Register 999dice : [https://www.999dice.com/?275583457](#999dice.com-nvthang)
 
 This is martingale \
 https://corporatefinanceinstitute.com/resources/knowledge/trading-investing/martingale-strategy/ \
