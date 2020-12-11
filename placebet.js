@@ -3,7 +3,7 @@ const axios = require('axios');
 const qs = require('qs');
 let login = require('./login.js');
 let lowhigh =  require('./lowhigh.js')
-let  size = require('./payin.js')
+//let  size = require('./payin.js')
 /*;
  *
 PlaceBet
@@ -66,7 +66,7 @@ async function placebet(){
         data: qs.stringify(body),
       });
       if (result.data.PayOut > 0 ){
-        body.PayIn = size(result.data.StartingBalance);
+        body.PayIn =  conf.PayIn
         console.log('You win' + "\n PayIn next or Betsize:" + body.PayIn);
       }else {
         body.PayIn = (body.PayIn * (100+ conf.Betsize)) /100
